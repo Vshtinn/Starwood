@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>StarWood</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav>
+    <button onclick="showPage('play')">Play</button>
+    <button onclick="showPage('about')">About Us</button>
+    <button onclick="showPage('help')">Help</button>
+  </nav>
+
+  <!-- Moving Image -->
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Star_icon_stylized.svg/240px-Star_icon_stylized.svg.png" 
+       alt="Floating Star" 
+       class="moving-image">
+
+  <!-- Content Sections -->
+  <div class="content" id="play">
+    <h1>Welcome to StarWood</h1>
+    <p>Embark on a timber-crafted journey through the stars. Navigate our space-themed maze full of adventure!</p>
+  </div>
+
+  <div class="content" id="about" style="display: none;">
+    <h1>About Us</h1>
+    <p>StarWood is a timber maze inspired by the cosmos. We blend natural materials with outer space to create a fun, educational experience for all ages.</p>
+  </div>
+
+  <div class="content" id="help" style="display: none;">
+    <h1>Help</h1>
+    <p>Questions? Reach out via email, or visit the entrance booth for on-site assistance.</p>
+  </div>
+
+  <script>
+    function showPage(page) {
+      // Hide all pages
+      document.getElementById("play").style.display = "none";
+      document.getElementById("about").style.display = "none";
+      document.getElementById("help").style.display = "none";
+
+      // Show the selected page
+      document.getElementById(page).style.display = "block";
+    }
+  </script>
+
+</body>
+</html>
